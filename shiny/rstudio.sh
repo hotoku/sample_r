@@ -4,6 +4,7 @@ PORT=8787
 while getopts p: OPT; do
     case ${OPT} in
         p) PORT=${OPTARG} ;;
+        *) exit 1 ;;
     esac
 done
 
