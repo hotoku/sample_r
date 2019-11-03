@@ -9,6 +9,7 @@ while getopts p: OPT; do
 done
 
 docker run -it \
+       --rm \
        -e PASSWORD=hotoku \
        -v $(pwd):/home/rstudio \
        -p ${PORT}:8787 hotoku/r
