@@ -9,6 +9,5 @@ while getopts p: OPT; do
 done
 
 docker run --rm -p ${PORT}:3838 \
-       -e HOTOKU_SHINYSERVER=1 \
        -v $(pwd):/srv/shiny-server/app \
        hotoku/shiny
